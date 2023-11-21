@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="warning"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <img src="assets/temporal_logo.png">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <ion-button routerLink="/iniciosesiondocente" expand="block" class="inicioBotones" name="person">
+    Iniciar Sesion
+  </ion-button>
+  <!--<ion-button routerLink="/iniciosesion" expand="block" class="inicioBotones" name="person">
+    Alumnos
+  </ion-button>-->
+  <ion-button routerLink="/registro" expand="block" class="registroBoton" name="person">
+    Registrarse
+  </ion-button>
+
+  <br>
+  <ion-label class="textoCreadoPor">App creada por:</ion-label>
+  <img src="assets/logo_duoc.png" class="logoSettings">
+</ion-content>

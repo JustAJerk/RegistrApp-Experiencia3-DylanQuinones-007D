@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button (click)="cerrarSesion()" text="Cerrar Sesion" color="danger"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img src="assets/temporal_logo.png">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-card-subtitle class="textoSaludo">Bienvenido {{ usuarioNombre }}!</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-button expand="block" class="inicioBotones" name="person" [routerLink]="['/perfil', idPerson]"> Perfil</ion-button>
+
+  <ion-button [routerLink]="['/periodoacademico', idPerson]" expand="block" class="inicioBotones" name="person">
+    Generar codigo QR
+  </ion-button>
+</ion-content>

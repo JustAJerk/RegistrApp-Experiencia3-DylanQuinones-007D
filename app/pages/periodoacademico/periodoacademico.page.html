@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Periodo Academico</ion-title>
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="Volver" color="warning"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Clases Registradas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button (click)="irClases()" expand="block" fill="clear" shape="round">
+    Añadir nueva clase
+  </ion-button>
+
+   <ion-card *ngFor="let c of clases; let i=index" [routerLink]="['/qrgenerado', c.codigo]">
+      <ion-card-header>
+        <ion-card-title>{{c['nombre']}}</ion-card-title>
+        <ion-card-subtitle>Año: {{c['anio']}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{c['semestre']}} | {{c['horasSemanales']}} Horas Semanales
+      </ion-card-content>
+  </ion-card>
+</ion-content>

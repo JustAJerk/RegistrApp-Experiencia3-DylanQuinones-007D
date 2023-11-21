@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>crearclase</ion-title>
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="Volver" color="warning"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">crearclase</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card-content>
+    <ion-list color="primary">
+      <!-- Rut del usuario -->
+      <ion-item>
+        <ion-label position="floating" class="formTexto">Nombre de la clase: </ion-label>
+        <ion-input type="text" placeholder="Lenguaje" name="nombre" [(ngModel)]="newClase.nombre"></ion-input>
+      </ion-item>
+      <!-- Nombre del usuario -->
+      <ion-item>
+        <ion-label position="floating" class="formTexto">Año: </ion-label>
+        <ion-input type="number" name="anio" [(ngModel)]="newClase.anio"></ion-input>
+      </ion-item>
+      <!-- Correo del usuario -->
+      <ion-item>
+        <ion-label position="floating" class="formTexto">Semestre: </ion-label>
+        <ion-input type="email" placeholder="1° Semestre" name="semestre" [(ngModel)]="newClase.semestre"></ion-input>
+      </ion-item>
+      <!-- Clave del usuario -->
+      <ion-item>
+        <ion-label position="floating" class="formTexto">Horas semanales: </ion-label>
+        <ion-input type="number" name="horas" [(ngModel)]="newClase.horasSemanales"></ion-input>
+      </ion-item>
+      <br>
+      <!-- Boton para enviar -->
+      <ion-button (click)="crearClase()" expand="block" fill="outline" shape="round" color="warning">
+        Crear Clase
+      </ion-button>
+    </ion-list>
+  </ion-card-content>
+</ion-content>

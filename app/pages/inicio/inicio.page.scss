@@ -1,0 +1,52 @@
+.inicioBotones {
+    --background: #ffd900;
+    --background-hover: #fff5bb;
+    --background-activated: #816e00;;
+    --background-focused: #ffd900;
+  
+    --color: rgb(0, 0, 0);
+  
+    --border-radius: 0;
+    --border-color: #ffa600;
+    --border-style: solid;
+    --border-width: 1px;
+  
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+  
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+
+.registroBoton {
+  --background: #5f7cff;
+  --background-hover: #becaff;
+  --background-activated: #1d2f80;
+  --background-focused: #5f7cff;
+
+  --color: rgb(0, 0, 0);
+
+  --border-radius: 0;
+  --border-color: #0d2188;
+  --border-style: solid;
+  --border-width: 1px;
+
+  --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
+
+.textoCreadoPor{
+  padding: 30%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: small;
+}
+
+.logoSettings{
+  padding: 10%;
+  width: 30;
+}
+
+ion-content{
+  background-color: #5f7cff;
+}

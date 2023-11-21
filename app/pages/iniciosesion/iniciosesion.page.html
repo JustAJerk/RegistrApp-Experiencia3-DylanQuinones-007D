@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="Volver" color="warning"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <img src="assets/temporal_logo.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title>Iniciar Sesion | Alumnos </ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="fondoLogin">
+      <ion-list>
+        <!-- Rut del usuario -->
+        <ion-item>
+          <ion-label position="floating" class="formTexto">Rut: </ion-label>
+          <ion-input type="text" placeholder="123456789-K" name="rut" [(ngModel)]="usuario.rut"></ion-input>
+        </ion-item>
+        <!-- Contraseña del usuario -->
+        <ion-item>
+          <ion-label position="floating" class="formTexto">Contraseña: </ion-label>
+          <ion-input type="password" placeholder="PMH1234" name="password" [(ngModel)]="usuario.contrasena"></ion-input>
+        </ion-item>
+        <br>
+        <!-- Boton para enviar -->
+        <ion-button routerLink="/menualumno" expand="block" fill="outline" shape="round" color="warning">
+          Ingresar
+        </ion-button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

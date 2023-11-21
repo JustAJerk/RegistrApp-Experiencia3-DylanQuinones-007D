@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="Volver" color="warning"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <img src="assets/temporal_logo.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-title>Iniciar Sesion</ion-card-title>
+    </ion-card-header>
+
+    <form [formGroup]="loginForm">
+      <ion-card-content class="fondoLogin">
+        <ion-list>
+            <!-- Rut del usuario -->
+            <ion-item>
+              <ion-label position="floating">Nombre de usuario: </ion-label>
+              <ion-input type="text" formControlName="username"></ion-input>
+            </ion-item>
+
+            <div *ngIf="loginForm.get('username')?.invalid && (loginForm.get('username')?.dirty || loginForm.get('username')?.touched)">
+              <div style="color:red" *ngIf="loginForm.get('username')?.hasError('required')">
+                ¡Username es obligatorio!
+              </div>
+            </div>
+            <!-- Contraseña del usuario -->
+            <ion-item>
+              <ion-label position="floating">Contraseña: </ion-label>
+              <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+
+            <div style="color:red" *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+              <div *ngIf="loginForm.get('password')?.hasError('required')">
+                ¡Password es obligatoria!
+              </div>
+            </div>
+            <br>
+            <!-- Boton para enviar -->
+            <ion-button (click)="login()" [disabled]="!loginForm.valid" expand="block" color="primary" shape="round">
+              Ingresar
+            </ion-button>
+        
+        </ion-list>
+      </ion-card-content>
+    </form>
+  </ion-card>
+</ion-content>

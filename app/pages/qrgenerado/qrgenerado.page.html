@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="Volver" color="primary"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <br>
+  <ion-title class="ion-text-center">{{ nombreClaseTitulo }}</ion-title>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-subtitle class="ion-text-center">Codigo QR generado con exito!</ion-card-subtitle>
+      <qrcode [qrdata]="nombreClase" [width]="256" [errorCorrectionLevel]="'M'" class="fotoQRcontent"></qrcode>
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block" class="inicioBotones" name="person">
+    | Proyectar QR |
+  </ion-button>
+</ion-content>
